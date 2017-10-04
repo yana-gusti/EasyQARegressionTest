@@ -52,7 +52,7 @@ public class BasePageMethods{
     }
 
     public void waitForElement(WebDriver driver, String xpath){
-        WebDriverWait wait = new WebDriverWait(driver, 5000);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
     }
 

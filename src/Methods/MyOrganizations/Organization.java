@@ -24,6 +24,12 @@ public class Organization extends BasePageMethods {
         waitForElement(driver, ".//*[@id='my_organization']/div[1]/h2");
     }
 
+    public OrganizationMembers goToOrganizationMembers(WebDriver driver){
+        clickButton(driver, ".//*[@id='left-menu']/li[3]/a");
+        waitForElement(driver, ".//*[@id='dashboard']/div/div[1]/h2");
+        return new OrganizationMembers();
+    }
+
     public void openOrganization(WebDriver driver){
         clickButton(driver, ".//*[@id='my_organization']/div[2]/div/div[1]/div/a");
         waitForElement(driver, ".//*[@id='dashboard']/div/div[1]/h2");

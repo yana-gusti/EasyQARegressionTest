@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 /**
  * Created by yanagusti on 10/4/17.
  */
-public class LoginTest extends BaseTest {
+public class LoginPositiveTest extends BaseTest {
 
     @Test
     public void loginPositive(){
@@ -20,12 +20,6 @@ public class LoginTest extends BaseTest {
         logout();
     }
 
-    @Test
-    public void loginNegative(){
-        Login login = new Login();
-        login.login(driver,email, password+"1");
-        waitForElement(".//*[@id='new_user']/div[1]/span");
-        Assert.assertEquals("Invalid Email or password.", driver.findElement(By.xpath(".//*[@id='new_user']/div[1]/span")).getText());
-    }
+
 
 }

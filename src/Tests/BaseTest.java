@@ -1,6 +1,7 @@
 package Tests;
 
 import Methods.MyProfile.Login;
+import Methods.MyProjects.Projects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -72,7 +73,7 @@ public class BaseTest {
     }
 
     public void waitForElement(String xpath){
-        WebDriverWait wait = new WebDriverWait(driver, 2);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
     }
 
@@ -80,6 +81,16 @@ public class BaseTest {
         Login login = new Login();
         login.login(driver, email, password);
         waitForElement(".//*[@id='mCSB_2_container']/div[1]/div/div/div/div/div[1]/div[1]/a");
+    }
+
+    public Projects openProject(){
+        Login login = new Login();
+        login.login(driver, email, password);
+        waitForElement(".//*[@id='mCSB_2_container']/div[1]/div/div/div/div/div[1]/div[1]/a");
+        Projects projects = new Projects();
+        projects.goToMyProjects(driver);
+        projects.openProject(driver);
+        return projects;
     }
 
     public void logout(){
