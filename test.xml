@@ -5,6 +5,8 @@
         <parameter name="server" value="prod" />
         <classes>
             <class name="Tests.MyProfile.LoginTest"/>
+            <class name="Tests.MyProfile.MyProfileTests"/>
+            <class name="Tests.MyOrganizations.OrganizationTests"/>
         </classes>
     </test>
 
