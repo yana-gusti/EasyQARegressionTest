@@ -1,33 +1,31 @@
 package Methods.MyProfile;
 
-import org.openqa.selenium.By;
+import Methods.BasePageMethods;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 /**
  * Created by yanagusti on 10/4/17.
  */
-public class Login{
+public class Login extends BasePageMethods{
 
-    WebElement email;
-    WebElement pass;
-    WebElement signInButton;
 
     public void login(WebDriver driver, String _email, String _pass){
 
-        email = driver.findElement(By.xpath(".//*[@id='user_email']"));
-        pass = driver.findElement(By.xpath(".//*[@id='user_password']"));
-        signInButton = driver.findElement(By.xpath(".//*[@id='new_user']/input[2]"));
-
-        email.click();
-        email.clear();
-        email.sendKeys(_email);
-
-        pass.click();
-        pass.clear();
-        pass.sendKeys(_pass);
-
-        signInButton.click();
+        sendText(driver,".//*[@id='user_email']", _email);
+        sendText(driver,".//*[@id='user_password']", _pass);
+        clickButton(driver,".//*[@id='new_user']/input[2]"); //signin button
     }
+
+    public void logout(WebDriver driver){
+
+        clickButton(driver, ".//*[@id='head_menu']/div[3]/a[2]"); //logout button
+    }
+
+    public MyProfile goToMyProfile(WebDriver driver){
+        clickButton(driver,".//*[@id='head_menu']/div[3]/a[1]"); //My Profile button
+        return new MyProfile();
+    }
+
+
 
 }

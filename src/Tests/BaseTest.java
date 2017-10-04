@@ -1,5 +1,6 @@
 package Tests;
 
+import Methods.MyProfile.Login;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -32,11 +33,6 @@ public class BaseTest {
 
         driver = new ChromeDriver(chrome_options);
 
-//        System.setProperty("webdriver.chrome.driver", "./drivers/for mac/chromedriver");
-//
-//
-//        driver = new ChromeDriver();
-
         switch (server) {
             case "prod":
                 baseUrl = "https://app.geteasyqa.com/";
@@ -53,15 +49,43 @@ public class BaseTest {
         waitForElement(".//*[@id='user_email']");
     }
 
+//    @BeforeMethod
+//
+//    public void SetUp() throws InterruptedException {
+//
+//
+//        System.setProperty("webdriver.chrome.driver", "./drivers/for mac/chromedriver");
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--window-size=1920,1400");
+//        driver = new ChromeDriver(options);
+//
+//        baseUrl = "https://app.geteasyqa.com/";
+//
+//        driver.get(baseUrl+"/users/sign_in");
+//        waitForElement(".//*[@id='user_email']");
+//
+//    }
+
     @AfterMethod
     public void tearDown() throws Exception {
         driver.close();
-        driver.quit();
     }
 
     public void waitForElement(String xpath){
         WebDriverWait wait = new WebDriverWait(driver, 5000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+    }
+
+    public void login(){
+        Login login = new Login();
+        login.login(driver, email, password);
+        waitForElement(".//*[@id='mCSB_2_container']/div[1]/div/div/div/div/div[1]/div[1]/a");
+    }
+
+    public void logout(){
+        Login login = new Login();
+        login.logout(driver);
+
     }
 
 }
