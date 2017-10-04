@@ -3,6 +3,7 @@ package Tests;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -24,17 +25,17 @@ public class BaseTest {
     @BeforeMethod
     @Parameters("server")
     public void SetUp(String server) {
-//        System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
-//        ChromeOptions chrome_options = new ChromeOptions();
-//        chrome_options.addArguments("--headless");
-//        chrome_options.addArguments("--disable-gpu");
+        System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
+        ChromeOptions chrome_options = new ChromeOptions();
+        chrome_options.addArguments("--headless");
+        chrome_options.addArguments("--disable-gpu");
+
+        driver = new ChromeDriver(chrome_options);
+
+//        System.setProperty("webdriver.chrome.driver", "./drivers/for mac/chromedriver");
 //
-//        driver = new ChromeDriver(chrome_options);
-
-        System.setProperty("webdriver.chrome.driver", "./drivers/for mac/chromedriver");
-
-
-        driver = new ChromeDriver();
+//
+//        driver = new ChromeDriver();
 
         switch (server) {
             case "prod":
