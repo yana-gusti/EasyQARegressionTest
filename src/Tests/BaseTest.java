@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 
 /**
@@ -22,48 +23,48 @@ public class BaseTest {
     public String password = "111111";
 
 
-//    @BeforeMethod
-//    @Parameters("server")
-//    public void SetUp(String server) {
-//        System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
-//        ChromeOptions chrome_options = new ChromeOptions();
-//        chrome_options.addArguments("--headless");
-//        chrome_options.addArguments("--disable-gpu");
-//
-//        driver = new ChromeDriver(chrome_options);
-//
-//        switch (server) {
-//            case "prod":
-//                baseUrl = "https://app.geteasyqa.com/";
-//                break;
-//            case "test":
-//                baseUrl = "http://qa_dashboard.test.thinkmobiles.com:8085/";
-//                break;
-//            default:
-//                break;
-//
-//        }
-//
-//        driver.get(baseUrl+"/users/sign_in");
-//        waitForElement(".//*[@id='user_email']");
-//    }
-
     @BeforeMethod
+    @Parameters("server")
+    public void SetUp(String server) {
+        System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
+        ChromeOptions chrome_options = new ChromeOptions();
+        chrome_options.addArguments("--headless");
+        chrome_options.addArguments("--disable-gpu");
 
-    public void SetUp() throws InterruptedException {
+        driver = new ChromeDriver(chrome_options);
 
+        switch (server) {
+            case "prod":
+                baseUrl = "https://app.geteasyqa.com/";
+                break;
+            case "test":
+                baseUrl = "http://qa_dashboard.test.thinkmobiles.com:8085/";
+                break;
+            default:
+                break;
 
-        System.setProperty("webdriver.chrome.driver", "./drivers/for mac/chromedriver");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--window-size=1920,1400");
-        driver = new ChromeDriver(options);
-
-        baseUrl = "https://app.geteasyqa.com/";
+        }
 
         driver.get(baseUrl+"/users/sign_in");
         waitForElement(".//*[@id='user_email']");
-
     }
+
+//    @BeforeMethod
+//
+//    public void SetUp() throws InterruptedException {
+//
+//
+//        System.setProperty("webdriver.chrome.driver", "./drivers/for mac/chromedriver");
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--window-size=1920,1400");
+//        driver = new ChromeDriver(options);
+//
+//        baseUrl = "https://app.geteasyqa.com/";
+//
+//        driver.get(baseUrl+"/users/sign_in");
+//        waitForElement(".//*[@id='user_email']");
+//
+//    }
 
     @AfterMethod
     public void tearDown() throws Exception {
