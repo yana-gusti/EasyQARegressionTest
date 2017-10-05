@@ -14,7 +14,8 @@ public class OrganizationMembers extends BasePageMethods {
         waitForElement(driver, ".//*[@id='myModal']/div/div/div/h3");
         sendText(driver, ".//*[@id='emails']", email);
         clickButton(driver, ".//*[@id='myModal']/div/div/form/div[2]/input");
-        waitForElement(driver, ".//*[@id='dashboard']/div/div[2]/div/table/tbody/tr[3]/td[2]/p[1]");
+        waitForElement(driver, ".//*[@id='dashboard']/div/div[1]/a");
+
 
     }
 
