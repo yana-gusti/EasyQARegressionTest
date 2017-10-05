@@ -73,7 +73,7 @@ public class BaseTest {
     }
 
     public void waitForElement(String xpath){
-        WebDriverWait wait = new WebDriverWait(driver, 5);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
     }
 
