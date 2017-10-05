@@ -76,4 +76,44 @@ public class TestPlans extends BasePageMethods{
         clickButton(driver, ".//*[@id='confirm']");
         Thread.sleep(1000);
     }
+
+    public void createTestCase(WebDriver driver, String name) throws InterruptedException {
+        driver.findElement(By.className("nav-tabs")).findElement(By.xpath("./li[2]/a")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.className("cases")).findElement(By.xpath("./div[1]/a[2]")).click();
+        waitForElement(driver, ".//*[@id='myModal']/div/div");
+        sendText(driver, ".//*[@id='test_case_title']", name);
+        clickButton(driver, ".//*[@id='section']/div/a");
+        clickButton(driver, ".//*[@id='section']/ul/li[2]/a");
+        driver.findElement(By.className("modal-content")).findElement(By.xpath("./form/div[2]/input")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.className("test-caret")).click();
+        Thread.sleep(1000);
+        Assert.assertEquals(name, driver.findElement(By.className("cases-test-content-item")).findElement(By.xpath("./table/tbody/tr[2]/td[4]")).getText());
+    }
+
+    public void editTestCase(WebDriver driver, String name) throws InterruptedException {
+        driver.findElement(By.className("nav-tabs")).findElement(By.xpath("./li[2]/a")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.className("test-caret")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.className("cases-test-content-item")).findElement(By.xpath("./table/tbody/tr[2]/td[11]/div/a[2]/span")).click();
+        waitForElement(driver, ".//*[@id='myModal']/div/div");
+        Thread.sleep(1000);
+        sendText(driver, ".//*[@id='test_case_title']", name);
+        driver.findElement(By.className("modal-content")).findElement(By.xpath("./form/div[2]/input")).click();
+        Thread.sleep(1000);
+        Assert.assertEquals(name, driver.findElement(By.className("cases-test-content-item")).findElement(By.xpath("./table/tbody/tr[2]/td[4]")).getText());
+    }
+
+    public void deleteTestCase(WebDriver driver) throws InterruptedException {
+        driver.findElement(By.className("nav-tabs")).findElement(By.xpath("./li[2]/a")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.className("test-caret")).click();
+        driver.findElement(By.className("cases-test-content-item")).findElement(By.xpath("./table/tbody/tr[2]/td[11]/div/a[1]/span")).click();
+        waitForElement(driver, ".//*[@id='myModal']/div/div");
+        clickButton(driver, ".//*[@id='confirm']");
+        Thread.sleep(1000);
+        Assert.assertEquals("test1 (0)", driver.findElement(By.className("test-name")).getText());
+    }
 }
