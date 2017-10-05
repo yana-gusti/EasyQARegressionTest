@@ -37,10 +37,10 @@ public class Projects extends BasePageMethods{
 
     }
 
-    public void goToTestObjects(WebDriver driver){
+    public TestObjects goToTestObjects(WebDriver driver) throws InterruptedException {
         clickButton(driver, ".//*[@id='left-menu']/li[2]/a");
-        waitForElement(driver, ".//*[@id='mCSB_8_container']/div[1]/div/div[2]/div/div/div/div/div/a[1]");
-
+        Thread.sleep(2000);
+        return new TestObjects();
     }
 
     public void goToIntegrations(WebDriver driver){

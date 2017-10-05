@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class AddOrganizationMemberTest extends BaseTest {
 
     @Test
-    public void addMember(){
+    public void addMember() throws InterruptedException {
         login();
         Organization organization = new Organization();
         organization.goToMyOrganizations(driver);

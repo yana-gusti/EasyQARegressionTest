@@ -13,6 +13,10 @@
             <class name="Tests.MyProjects.AddProjectTest"/>
             <class name="Tests.MyProjects.ChangeProjectTest"/>
             <class name="Tests.MyProjects.AddProjectMemberTest"/>
+            <class name="Tests.MyProjects.TestObject.AddTestObjectTest"/>
+            <class name="Tests.MyProjects.TestObject.ViewTestObjectTest"/>
+
+            <class name="Tests.MyProjects.TestObject.DeleteTestObjectTest"/>
             <class name="Tests.MyProjects.DeleteProjectMemberTest"/>
             <class name="Tests.MyProjects.DeleteProjectTest"/>
             <class name="Tests.MyOrganizations.DeleteOrganizationMemberTest"/>

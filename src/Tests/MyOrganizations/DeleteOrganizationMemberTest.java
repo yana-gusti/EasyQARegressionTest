@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class DeleteOrganizationMemberTest  extends BaseTest{
 
     @Test
-    public void deleteMember(){
+    public void deleteMember() throws InterruptedException {
         login();
         Organization organization = new Organization();
         organization.goToMyOrganizations(driver);
