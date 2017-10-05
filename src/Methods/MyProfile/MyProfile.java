@@ -1,6 +1,7 @@
 package Methods.MyProfile;
 
 import Methods.BasePageMethods;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -15,10 +16,11 @@ public class MyProfile extends BasePageMethods{
         sendText(driver,".//*[@id='user_street_address']", _street);
         sendText(driver,".//*[@id='user_city']", _city);
         sendText(driver,".//*[@id='user_state']", _state);
-        sendText(driver,".//*[@id='user_zip_code']", _zip);
-        sendText(driver,".//*[@id='user_phone_number']", _phone);
-        selectItem(driver,".//*[@id='user_country']/div/a", _country);
-        clickButton(driver,".//*[@id='head_menu']/div[3]/a[2]"); //save button
+        driver.findElement(By.xpath(".//*[@id='user_state']")).submit();
+//        sendText(driver,".//*[@id='user_zip_code']", _zip);
+//        sendText(driver,".//*[@id='user_phone_number']", _phone);
+//        selectItem(driver,".//*[@id='user_country']/div/a", _country);
+//        clickButton(driver,".//*[@id='head_menu']/div[3]/a[2]"); //save button
 
     }
 
