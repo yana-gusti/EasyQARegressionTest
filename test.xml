@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Suite1" verbose="1" >
-    <test name="Prod">
+    <test name="ProdCreateObjects">
         <parameter name="server" value="prod" />
         <classes>
             <class name="Tests.MyProfile.LoginPositiveTest"/>
@@ -15,7 +15,18 @@
             <class name="Tests.MyProjects.AddProjectMemberTest"/>
             <class name="Tests.MyProjects.TestObject.AddTestObjectTest"/>
             <class name="Tests.MyProjects.TestObject.ViewTestObjectTest"/>
+            <class name="Tests.MyProjects.TestPlan.AddTestPlanTest"/>
+            <class name="Tests.MyProjects.TestPlan.EditTestPlanTest"/>
+            <class name="Tests.MyProjects.TestPlan.AddModuleTest"/>
+            <class name="Tests.MyProjects.TestPlan.EditModuleTest"/>
+        </classes>
+    </test>
 
+    <test name="ProdDeleteObjects">
+        <parameter name="server" value="prod" />
+        <classes>
+            <class name="Tests.MyProjects.TestPlan.DeleteModuleTest"/>
+            <class name="Tests.MyProjects.TestPlan.DeleteTestPlanTest"/>
             <class name="Tests.MyProjects.TestObject.DeleteTestObjectTest"/>
             <class name="Tests.MyProjects.DeleteProjectMemberTest"/>
             <class name="Tests.MyProjects.DeleteProjectTest"/>
@@ -23,28 +34,6 @@
             <class name="Tests.MyOrganizations.DeleteOrganizationTest"/>
         </classes>
     </test>
-
-    <!--<test name="Test">-->
-        <!--<parameter name="server" value="test" />-->
-        <!--<classes>-->
-            <!--<class name="Tests.MyProfile.LoginPositiveTest"/>-->
-            <!--<class name="Tests.MyProfile.LoginNegativeTest"/>-->
-            <!--<class name="Tests.MyProfile.ChangePasswordTest"/>-->
-            <!--<class name="Tests.MyOrganizations.AddOrganizationTest"/>-->
-            <!--<class name="Tests.MyOrganizations.ChangeOrganizationTest"/>-->
-            <!--<class name="Tests.MyOrganizations.AddOrganizationMemberTest"/>-->
-            <!--<class name="Tests.MyProjects.AddProjectTest"/>-->
-            <!--<class name="Tests.MyProjects.ChangeProjectTest"/>-->
-            <!--<class name="Tests.MyProjects.AddProjectMemberTest"/>-->
-            <!--<class name="Tests.MyProjects.DeleteProjectMemberTest"/>-->
-            <!--<class name="Tests.MyProjects.DeleteProjectTest"/>-->
-            <!--<class name="Tests.MyOrganizations.DeleteOrganizationMemberTest"/>-->
-            <!--<class name="Tests.MyOrganizations.DeleteOrganizationTest"/>-->
-        <!--</classes>-->
-    <!--</test>-->
-
-
-
 
 
 </suite>
