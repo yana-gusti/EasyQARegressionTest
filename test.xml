@@ -22,12 +22,24 @@
             <class name="Tests.MyProjects.TestPlan.EditModuleTest"/>
             <class name="Tests.MyProjects.TestPlan.AddTestCaseTest"/>
             <class name="Tests.MyProjects.TestPlan.EditTestCaseTest"/>
+            <class name="Tests.MyProjects.TestRuns.AddTestRunTest"/>
+            <class name="Tests.MyProjects.TestRuns.EditTestRunTest"/>
+            <class name="Tests.MyProjects.TestRuns.CloneTestRunTest"/>
+            <class name="Tests.MyProjects.TestReports.CrashesByVersionReportTest"/>
+            <class name="Tests.MyProjects.TestReports.IssuesByPriorityReportTest"/>
+            <class name="Tests.MyProjects.TestReports.IssuesByStatusReportTest"/>
+            <class name="Tests.MyProjects.TestReports.IssuesByTypeReportTest"/>
+            <class name="Tests.MyProjects.TestReports.ProjectSpentTimeReportTest"/>
+            <class name="Tests.MyProjects.TestReports.UserSpentTimeReportTest"/>
+            <class name="Tests.MyProjects.TestReports.TestPlanReportTest"/>
+            <class name="Tests.MyProjects.TestReports.TestRunReportTest"/>
         </classes>
     </test>
 
     <test name="ProdDeleteObjects">
         <parameter name="server" value="prod" />
         <classes>
+            <class name="Tests.MyProjects.TestRuns.DeleteTestRunTest"/>
             <class name="Tests.MyProjects.TestPlan.DeleteTestCaseTest"/>
             <class name="Tests.MyProjects.TestPlan.DeleteModuleTest"/>
             <class name="Tests.MyProjects.TestPlan.DeleteTestPlanTest"/>
