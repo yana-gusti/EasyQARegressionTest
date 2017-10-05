@@ -20,24 +20,24 @@
         </classes>
     </test>
 
-    <test name="Test">
-        <parameter name="server" value="test" />
-        <classes>
-            <class name="Tests.MyProfile.LoginPositiveTest"/>
-            <class name="Tests.MyProfile.LoginNegativeTest"/>
-            <class name="Tests.MyProfile.ChangePasswordTest"/>
-            <class name="Tests.MyOrganizations.AddOrganizationTest"/>
-            <class name="Tests.MyOrganizations.ChangeOrganizationTest"/>
-            <class name="Tests.MyOrganizations.AddOrganizationMemberTest"/>
-            <class name="Tests.MyProjects.AddProjectTest"/>
-            <class name="Tests.MyProjects.ChangeProjectTest"/>
-            <class name="Tests.MyProjects.AddProjectMemberTest"/>
-            <class name="Tests.MyProjects.DeleteProjectMemberTest"/>
-            <class name="Tests.MyProjects.DeleteProjectTest"/>
-            <class name="Tests.MyOrganizations.DeleteOrganizationMemberTest"/>
-            <class name="Tests.MyOrganizations.DeleteOrganizationTest"/>
-        </classes>
-    </test>
+    <!--<test name="Test">-->
+        <!--<parameter name="server" value="test" />-->
+        <!--<classes>-->
+            <!--<class name="Tests.MyProfile.LoginPositiveTest"/>-->
+            <!--<class name="Tests.MyProfile.LoginNegativeTest"/>-->
+            <!--<class name="Tests.MyProfile.ChangePasswordTest"/>-->
+            <!--<class name="Tests.MyOrganizations.AddOrganizationTest"/>-->
+            <!--<class name="Tests.MyOrganizations.ChangeOrganizationTest"/>-->
+            <!--<class name="Tests.MyOrganizations.AddOrganizationMemberTest"/>-->
+            <!--<class name="Tests.MyProjects.AddProjectTest"/>-->
+            <!--<class name="Tests.MyProjects.ChangeProjectTest"/>-->
+            <!--<class name="Tests.MyProjects.AddProjectMemberTest"/>-->
+            <!--<class name="Tests.MyProjects.DeleteProjectMemberTest"/>-->
+            <!--<class name="Tests.MyProjects.DeleteProjectTest"/>-->
+            <!--<class name="Tests.MyOrganizations.DeleteOrganizationMemberTest"/>-->
+            <!--<class name="Tests.MyOrganizations.DeleteOrganizationTest"/>-->
+        <!--</classes>-->
+    <!--</test>-->
 
 
 
