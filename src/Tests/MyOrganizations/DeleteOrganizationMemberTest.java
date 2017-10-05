@@ -20,7 +20,10 @@ public class DeleteOrganizationMemberTest  extends BaseTest{
         organization.openOrganization(driver);
         OrganizationMembers organizationMembers = organization.goToOrganizationMembers(driver);
         organizationMembers.deleteMember(driver);
-        Assert.assertEquals("1", driver.findElement(By.xpath(".//*[@id='dashboard']/div/div[2]/div/table/thead/tr/td[1]/span")).getText());
+        organization.goToMyOrganizations(driver);
+        organization.openOrganization(driver);
+        organization.goToOrganizationMembers(driver);
+        Assert.assertEquals("2", driver.findElement(By.xpath(".//*[@id='dashboard']/div/div[2]/div/table/thead/tr/td[1]/span")).getText());
         logout();
     }
 }

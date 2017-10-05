@@ -24,5 +24,6 @@ public class OrganizationMembers extends BasePageMethods {
         clickButton(driver, ".//*[@id='dashboard']/div/div[2]/div/table/tbody/tr[3]/td[6]/span/span[1]");
         Alert alert = driver.switchTo().alert();
         alert.accept();
+        waitForElement(driver, ".//*[@id='dashboard']/div/div[2]/div/table/thead/tr/td[1]/span");
     }
 }
