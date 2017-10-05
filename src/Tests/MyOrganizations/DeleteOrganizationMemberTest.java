@@ -3,8 +3,6 @@ package Tests.MyOrganizations;
 import Methods.MyOrganizations.Organization;
 import Methods.MyOrganizations.OrganizationMembers;
 import Tests.BaseTest;
-import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
@@ -20,10 +18,6 @@ public class DeleteOrganizationMemberTest  extends BaseTest{
         organization.openOrganization(driver);
         OrganizationMembers organizationMembers = organization.goToOrganizationMembers(driver);
         organizationMembers.deleteMember(driver);
-        organization.goToMyOrganizations(driver);
-        organization.openOrganization(driver);
-        organization.goToOrganizationMembers(driver);
-        Assert.assertEquals("2", driver.findElement(By.xpath(".//*[@id='dashboard']/div/div[2]/div/table/thead/tr/td[1]/span")).getText());
         logout();
     }
 }

@@ -49,7 +49,7 @@ public class BaseTest {
         driver.get(baseUrl+"/users/sign_in");
         waitForElement(".//*[@id='user_email']");
     }
-//
+
 //    @BeforeMethod
 //
 //    public void SetUp() throws InterruptedException {
