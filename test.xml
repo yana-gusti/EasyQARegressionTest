@@ -33,12 +33,15 @@
             <class name="Tests.MyProjects.TestReports.UserSpentTimeReportTest"/>
             <class name="Tests.MyProjects.TestReports.TestPlanReportTest"/>
             <class name="Tests.MyProjects.TestReports.TestRunReportTest"/>
+            <class name="Tests.MyProjects.Issues.AddIssueTest"/>
+            <class name="Tests.MyProjects.Issues.EditIssueTest"/>
         </classes>
     </test>
 
     <test name="ProdDeleteObjects">
         <parameter name="server" value="prod" />
         <classes>
+            <class name="Tests.MyProjects.Issues.DeleteIssueTest"/>
             <class name="Tests.MyProjects.TestRuns.DeleteTestRunTest"/>
             <class name="Tests.MyProjects.TestPlan.DeleteTestCaseTest"/>
             <class name="Tests.MyProjects.TestPlan.DeleteModuleTest"/>

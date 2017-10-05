@@ -65,7 +65,7 @@ public class TestRuns extends BasePageMethods {
         sleep(1000);
         Alert alert = driver.switchTo().alert();
         alert.accept();
-        Thread.sleep(2000);
+       sleep(2000);
 
     }
 

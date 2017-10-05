@@ -54,9 +54,10 @@ public class Projects extends BasePageMethods{
 
     }
 
-    public void goToIssues(WebDriver driver){
-        clickButton(driver, ".//*[@id='project_title']");
-        waitForElement(driver, ".//*[@id='mCSB_8_container']/div[1]/div/div[2]/div/div/div/div[1]/div/div[1]/div[1]/a");
+    public Issues goToIssues(WebDriver driver){
+        clickButton(driver, ".//*[@id='left-menu']/li[5]/a");
+        waitForElement(driver, ".//*[@id='status-1']");
+        return new Issues();
     }
 
     public void goToCrashes(WebDriver driver){

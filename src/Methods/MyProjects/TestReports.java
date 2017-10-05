@@ -25,6 +25,7 @@ public class TestReports extends BasePageMethods {
         clickButton(driver, ".//*[@id='report-button']");
         waitForElement(driver, ".//*[@id='tab_content']/div/div/div/div[2]/h3");
 
+
     }
 
     public void testRunReport(WebDriver driver) throws InterruptedException {
