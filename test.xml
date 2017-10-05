@@ -19,12 +19,15 @@
             <class name="Tests.MyProjects.TestPlan.EditTestPlanTest"/>
             <class name="Tests.MyProjects.TestPlan.AddModuleTest"/>
             <class name="Tests.MyProjects.TestPlan.EditModuleTest"/>
+            <class name="Tests.MyProjects.TestPlan.AddTestCaseTest"/>
+            <class name="Tests.MyProjects.TestPlan.EditTestCaseTest"/>
         </classes>
     </test>
 
     <test name="ProdDeleteObjects">
         <parameter name="server" value="prod" />
         <classes>
+            <class name="Tests.MyProjects.TestPlan.DeleteTestCaseTest"/>
             <class name="Tests.MyProjects.TestPlan.DeleteModuleTest"/>
             <class name="Tests.MyProjects.TestPlan.DeleteTestPlanTest"/>
             <class name="Tests.MyProjects.TestObject.DeleteTestObjectTest"/>
