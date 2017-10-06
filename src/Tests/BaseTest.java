@@ -37,17 +37,20 @@ public class BaseTest {
         switch (server) {
             case "prod":
                 baseUrl = "https://app.geteasyqa.com/";
+                driver.get(baseUrl+"/users/sign_in");
+                waitForElement(".//*[@id='user_email']");
                 break;
             case "test":
                 baseUrl = "http://qa_dashboard.test.thinkmobiles.com:8085/";
+                driver.get(baseUrl+"/users/sign_in");
+                waitForElement(".//*[@id='user_email']");
                 break;
             default:
                 break;
 
         }
 
-        driver.get(baseUrl+"/users/sign_in");
-        waitForElement(".//*[@id='user_email']");
+
     }
 
 //    @BeforeMethod

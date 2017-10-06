@@ -7,8 +7,8 @@
             <class name="Tests.MyProfile.LoginPositiveTest"/>
             <class name="Tests.MyProfile.LoginNegativeTest"/>
             <class name="Tests.MyProfile.ChangePasswordTest"/>
-            <class name="Tests.MyProfile.MyProfileTests"/>
             <class name="Tests.MyOrganizations.AddOrganizationTest"/>
+            <class name="Tests.MyProfile.MyProfileTests"/>
             <class name="Tests.MyOrganizations.ChangeOrganizationTest"/>
             <class name="Tests.MyOrganizations.AddOrganizationMemberTest"/>
             <class name="Tests.MyProjects.AddProjectTest"/>

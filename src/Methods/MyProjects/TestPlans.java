@@ -84,6 +84,7 @@ public class TestPlans extends BasePageMethods{
         waitForElement(driver, ".//*[@id='myModal']/div/div");
         sendText(driver, ".//*[@id='test_case_title']", name);
         clickButton(driver, ".//*[@id='section']/div/a");
+        Thread.sleep(1000);
         clickButton(driver, ".//*[@id='section']/ul/li[2]/a");
         driver.findElement(By.className("modal-content")).findElement(By.xpath("./form/div[2]/input")).click();
         Thread.sleep(1000);
