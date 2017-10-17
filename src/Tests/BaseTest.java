@@ -30,7 +30,6 @@ public class BaseTest {
         System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
         ChromeOptions chrome_options = new ChromeOptions();
         chrome_options.addArguments("--headless");
-        chrome_options.addArguments("--remote-debugging-port=9222");
         chrome_options.addArguments("--disable-gpu");
 
         driver = new ChromeDriver(chrome_options);
