@@ -17,7 +17,7 @@ public class TestObjects extends BasePageMethods{
         sendText(driver, ".//*[@id='test_object_link']", url);
         clickButton(driver, ".//*[@id='link_upload']/input[4]");
         Thread.sleep(1000);
-        driver.findElement(By.cssSelector("span.icon-close-icon")).click();
+
 
     }
 
