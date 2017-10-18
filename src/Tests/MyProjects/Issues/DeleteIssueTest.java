@@ -14,6 +14,5 @@ public class DeleteIssueTest extends BaseTest {
         Projects projects = openProject();
         Issues issues = projects.goToIssues(driver);
         issues.deleteIssue(driver);
-        logout();
     }
 }

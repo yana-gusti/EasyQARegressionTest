@@ -29,6 +29,7 @@ public class TestRuns extends BasePageMethods {
         new Actions(driver).moveToElement(driver.findElement(By.className("modal-body")).findElement(By.xpath("./div[5]/input")))
                 .build().perform();
         clickButton(driver, ".//*[@id='testRunSelect']/div/a");
+        sleep(1000);
         waitForElement(driver, ".//*[@id='testRunSelect']/ul/li[2]/a");
         clickButton(driver, ".//*[@id='testRunSelect']/ul/li[2]/a");
         driver.findElement(By.xpath(".//*[@id='testRunSelect']/ul/li[2]/a")).submit();

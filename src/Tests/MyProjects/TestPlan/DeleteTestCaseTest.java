@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class DeleteTestCaseTest extends BaseTest {
 
     @Test
-    public void createTestCase() throws InterruptedException {
+    public void deleteTestCase() throws InterruptedException {
         Projects projects = openProject();
         projects.goToTestActivities(driver);
         TestPlans testPlans = new TestPlans();

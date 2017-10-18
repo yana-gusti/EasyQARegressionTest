@@ -36,6 +36,7 @@ public class TestReports extends BasePageMethods {
         clickButton(driver, ".//*[@id='report-type']/ul/li[3]/a");
         waitForElement(driver, ".//*[@id='test-run-report']/div/a");
         clickButton(driver, ".//*[@id='test-run-report']/div/a");
+        sleep(1000);
         waitForElement(driver, ".//*[@id='test-run-report']/ul/li[2]/a");
         clickButton(driver, ".//*[@id='test-run-report']/ul/li[2]/a");
         clickButton(driver, ".//*[@id='report-button']");

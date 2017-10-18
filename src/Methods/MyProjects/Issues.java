@@ -1,7 +1,6 @@
 package Methods.MyProjects;
 
 import Methods.BasePageMethods;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -46,8 +45,7 @@ public class Issues extends BasePageMethods {
     public void deleteIssue(WebDriver driver) throws InterruptedException {
         openIssue(driver);
         driver.findElement(By.cssSelector("a.btn.btn-red.btn-big")).click();
-        Alert alert = driver.switchTo().alert();
-        alert.accept();
+        driver.findElement(By.cssSelector("a.btn.btn-red.btn-big")).submit();
         Thread.sleep(2000);
     }
 }

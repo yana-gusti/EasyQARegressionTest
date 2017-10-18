@@ -1,7 +1,7 @@
 package Methods.MyOrganizations;
 
 import Methods.BasePageMethods;
-import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -25,8 +25,7 @@ public class OrganizationMembers extends BasePageMethods {
 
     public void deleteMember(WebDriver driver) throws InterruptedException {
         clickButton(driver, ".//*[@id='dashboard']/div/div[2]/div/table/tbody/tr[3]/td[6]/span/span[1]");
-        Alert alert = driver.switchTo().alert();
-        alert.accept();
+        driver.findElement(By.xpath(".//*[@id='dashboard']/div/div[2]/div/table/tbody/tr[3]/td[6]/span/span[1]")).submit();
         Thread.sleep(2000);
         waitForElement(driver, ".//*[@id='dashboard']/div/div[2]/div/table/thead/tr/td[1]/span");
     }
