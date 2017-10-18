@@ -32,7 +32,6 @@ public class TestObjects extends BasePageMethods{
         driver.findElement(By.className("test-object")).findElement(By.xpath("./td[1]/a")).click();
 
         Thread.sleep(2000);
-        clickButton(driver, "html/body/div[2]/div[2]/span");
 
     }
 }
