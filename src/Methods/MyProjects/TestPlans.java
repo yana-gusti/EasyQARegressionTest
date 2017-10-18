@@ -80,15 +80,12 @@ public class TestPlans extends BasePageMethods{
     public void createTestCase(WebDriver driver, String name) throws InterruptedException {
         driver.findElement(By.className("nav-tabs")).findElement(By.xpath("./li[2]/a")).click();
         Thread.sleep(1000);
-        driver.findElement(By.className("cases")).findElement(By.xpath("./div[1]/a[2]")).click();
+        driver.findElement(By.cssSelector(".test-caret.caret-down")).click();
+        driver.findElement(By.cssSelector(".case>span")).click();
         waitForElement(driver, ".//*[@id='myModal']/div/div");
         sendText(driver, ".//*[@id='test_case_title']", name);
-        clickButton(driver, ".//*[@id='section']/div/a");
         Thread.sleep(1000);
-        clickButton(driver, ".//*[@id='section']/ul/li[2]/a");
-        driver.findElement(By.className("modal-content")).findElement(By.xpath("./form/div[2]/input")).click();
-        Thread.sleep(1000);
-        driver.findElement(By.className("test-caret")).click();
+        driver.findElement(By.cssSelector(".submit_project.btn.btn-green")).click();
         Thread.sleep(1000);
         Assert.assertEquals(name, driver.findElement(By.className("cases-test-content-item")).findElement(By.xpath("./table/tbody/tr[2]/td[4]")).getText());
     }
