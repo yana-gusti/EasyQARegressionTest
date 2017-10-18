@@ -1,7 +1,6 @@
 package Methods.MyProjects;
 
 import Methods.BasePageMethods;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -63,9 +62,6 @@ public class TestRuns extends BasePageMethods {
         driver.findElement(By.className("nav-tabs")).findElement(By.xpath("./li[3]/a")).click();
         sleep(1000);
         driver.findElement(By.className("testRun-box-item-info")).findElement(By.xpath("./a[4]")).click();
-        sleep(1000);
-        Alert alert = driver.switchTo().alert();
-        alert.accept();
        sleep(2000);
 
     }
