@@ -15,8 +15,8 @@ public class TestObjects extends BasePageMethods{
         driver.findElement(By.linkText("Add Test Object")).click();
         waitForElement(driver, ".//*[@id='myModal']/div/div");
         sendText(driver, ".//*[@id='test_object_link']", url);
-        clickButton(driver, ".//*[@id='link_upload']/input[4]");
         Thread.sleep(1000);
+        driver.findElement(By.xpath(".//*[@id='test_object_link']")).submit();
 
 
     }
