@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class DeleteTestObjectTest extends BaseTest{
 
     @Test
-    public void addTestObject() throws InterruptedException {
+    public void deleteTestObject() throws InterruptedException {
         Projects projects = openProject();
         TestObjects testObjects = projects.goToTestObjects(driver);
         testObjects.deleteTestObject(driver);

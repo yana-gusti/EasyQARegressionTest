@@ -45,7 +45,7 @@ public class Issues extends BasePageMethods {
 
     public void deleteIssue(WebDriver driver) throws InterruptedException {
         openIssue(driver);
-        driver.findElement(By.className("tab-footer")).findElement(By.xpath("./div[1]/a")).click();
+        driver.findElement(By.cssSelector("a.btn.btn-red.btn-big")).click();
         Alert alert = driver.switchTo().alert();
         alert.accept();
         Thread.sleep(2000);

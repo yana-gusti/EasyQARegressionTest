@@ -11,13 +11,13 @@ import org.testng.Assert;
  */
 public class TestObjects extends BasePageMethods{
 
-    public void addTestObject(WebDriver driver, String url){
+    public void addTestObject(WebDriver driver, String url) throws InterruptedException {
         driver.findElement(By.className("card-builds-header")).findElement(By.xpath("./a[1]")).click();
         waitForElement(driver, ".//*[@id='myModal']/div/div");
         sendText(driver, ".//*[@id='test_object_link']", url);
         clickButton(driver, ".//*[@id='link_upload']/input[4]");
-        waitForElement(driver, ".//*[@id='after_upload']/div/div[2]/button[2]");
-        clickButton(driver, ".//*[@id='after_upload']/div/div[2]/button[2]");
+        Thread.sleep(1000);
+        driver.findElement(By.cssSelector("button.btn.btn-white-green.cancel")).click();
 
     }
 

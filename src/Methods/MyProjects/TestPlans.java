@@ -87,7 +87,7 @@ public class TestPlans extends BasePageMethods{
         Thread.sleep(1000);
         driver.findElement(By.cssSelector(".submit_project.btn.btn-green")).click();
         Thread.sleep(1000);
-        Assert.assertEquals(name, driver.findElement(By.className("cases-test-content-item")).findElement(By.xpath("./table/tbody/tr[2]/td[4]")).getText());
+        Assert.assertEquals(name, driver.findElement(By.cssSelector("td.test-title")).getText());
     }
 
     public void editTestCase(WebDriver driver, String name) throws InterruptedException {
@@ -101,7 +101,7 @@ public class TestPlans extends BasePageMethods{
         sendText(driver, ".//*[@id='test_case_title']", name);
         driver.findElement(By.className("modal-content")).findElement(By.xpath("./form/div[2]/input")).click();
         Thread.sleep(1000);
-        Assert.assertEquals(name, driver.findElement(By.className("cases-test-content-item")).findElement(By.xpath("./table/tbody/tr[2]/td[4]")).getText());
+        Assert.assertEquals(name, driver.findElement(By.cssSelector("td.test-title")).getText());
     }
 
     public void deleteTestCase(WebDriver driver) throws InterruptedException {
