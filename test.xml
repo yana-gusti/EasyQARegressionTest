@@ -47,51 +47,51 @@
             <class name="Tests.MyOrganizations.DeleteOrganizationTest"/>
         </classes>
     </test>
-    <test name="TestServer">
-        <parameter name="server" value="test" />
-        <classes>
-            <class name="Tests.MyProfile.LoginPositiveTest"/>
-            <class name="Tests.MyProfile.LoginNegativeTest"/>
-            <class name="Tests.MyProfile.ChangePasswordTest"/>
-            <class name="Tests.MyOrganizations.AddOrganizationTest"/>
-            <class name="Tests.MyProfile.MyProfileTests"/>
-            <class name="Tests.MyOrganizations.ChangeOrganizationTest"/>
-            <class name="Tests.MyOrganizations.AddOrganizationMemberTest"/>
-            <class name="Tests.MyProjects.AddProjectTest"/>
-            <class name="Tests.MyProjects.ChangeProjectTest"/>
-            <class name="Tests.MyProjects.AddProjectMemberTest"/>
-            <class name="Tests.MyProjects.TestObject.AddTestObjectTest"/>
-            <class name="Tests.MyProjects.TestObject.ViewTestObjectTest"/>
-            <class name="Tests.MyProjects.TestPlan.AddTestPlanTest"/>
-            <class name="Tests.MyProjects.TestPlan.EditTestPlanTest"/>
-            <class name="Tests.MyProjects.TestPlan.AddModuleTest"/>
-            <class name="Tests.MyProjects.TestPlan.EditModuleTest"/>
-            <class name="Tests.MyProjects.TestPlan.AddTestCaseTest"/>
-            <class name="Tests.MyProjects.TestPlan.EditTestCaseTest"/>
-            <class name="Tests.MyProjects.TestRuns.AddTestRunTest"/>
-            <class name="Tests.MyProjects.TestRuns.EditTestRunTest"/>
-            <class name="Tests.MyProjects.TestRuns.CloneTestRunTest"/>
-            <class name="Tests.MyProjects.TestReports.CrashesByVersionReportTest"/>
-            <class name="Tests.MyProjects.TestReports.IssuesByPriorityReportTest"/>
-            <class name="Tests.MyProjects.TestReports.IssuesByStatusReportTest"/>
-            <class name="Tests.MyProjects.TestReports.IssuesByTypeReportTest"/>
-            <class name="Tests.MyProjects.TestReports.ProjectSpentTimeReportTest"/>
-            <class name="Tests.MyProjects.TestReports.UserSpentTimeReportTest"/>
-            <class name="Tests.MyProjects.TestReports.TestPlanReportTest"/>
-            <class name="Tests.MyProjects.TestReports.TestRunReportTest"/>
-            <class name="Tests.MyProjects.Issues.AddIssueTest"/>
-            <class name="Tests.MyProjects.Issues.EditIssueTest"/>
-            <class name="Tests.MyProjects.Issues.DeleteIssueTest"/>
-            <class name="Tests.MyProjects.TestRuns.DeleteTestRunTest"/>
-            <class name="Tests.MyProjects.TestPlan.DeleteTestCaseTest"/>
-            <class name="Tests.MyProjects.TestPlan.DeleteModuleTest"/>
-            <class name="Tests.MyProjects.TestPlan.DeleteTestPlanTest"/>
-            <class name="Tests.MyProjects.TestObject.DeleteTestObjectTest"/>
-            <class name="Tests.MyProjects.DeleteProjectMemberTest"/>
-            <class name="Tests.MyProjects.DeleteProjectTest"/>
-            <class name="Tests.MyOrganizations.DeleteOrganizationMemberTest"/>
-            <class name="Tests.MyOrganizations.DeleteOrganizationTest"/>
-        </classes>
-    </test>
+    <!--<test name="TestServer">-->
+        <!--<parameter name="server" value="test" />-->
+        <!--<classes>-->
+            <!--<class name="Tests.MyProfile.LoginPositiveTest"/>-->
+            <!--<class name="Tests.MyProfile.LoginNegativeTest"/>-->
+            <!--<class name="Tests.MyProfile.ChangePasswordTest"/>-->
+            <!--<class name="Tests.MyOrganizations.AddOrganizationTest"/>-->
+            <!--<class name="Tests.MyProfile.MyProfileTests"/>-->
+            <!--<class name="Tests.MyOrganizations.ChangeOrganizationTest"/>-->
+            <!--<class name="Tests.MyOrganizations.AddOrganizationMemberTest"/>-->
+            <!--<class name="Tests.MyProjects.AddProjectTest"/>-->
+            <!--<class name="Tests.MyProjects.ChangeProjectTest"/>-->
+            <!--<class name="Tests.MyProjects.AddProjectMemberTest"/>-->
+            <!--<class name="Tests.MyProjects.TestObject.AddTestObjectTest"/>-->
+            <!--<class name="Tests.MyProjects.TestObject.ViewTestObjectTest"/>-->
+            <!--<class name="Tests.MyProjects.TestPlan.AddTestPlanTest"/>-->
+            <!--<class name="Tests.MyProjects.TestPlan.EditTestPlanTest"/>-->
+            <!--<class name="Tests.MyProjects.TestPlan.AddModuleTest"/>-->
+            <!--<class name="Tests.MyProjects.TestPlan.EditModuleTest"/>-->
+            <!--<class name="Tests.MyProjects.TestPlan.AddTestCaseTest"/>-->
+            <!--<class name="Tests.MyProjects.TestPlan.EditTestCaseTest"/>-->
+            <!--<class name="Tests.MyProjects.TestRuns.AddTestRunTest"/>-->
+            <!--<class name="Tests.MyProjects.TestRuns.EditTestRunTest"/>-->
+            <!--<class name="Tests.MyProjects.TestRuns.CloneTestRunTest"/>-->
+            <!--<class name="Tests.MyProjects.TestReports.CrashesByVersionReportTest"/>-->
+            <!--<class name="Tests.MyProjects.TestReports.IssuesByPriorityReportTest"/>-->
+            <!--<class name="Tests.MyProjects.TestReports.IssuesByStatusReportTest"/>-->
+            <!--<class name="Tests.MyProjects.TestReports.IssuesByTypeReportTest"/>-->
+            <!--<class name="Tests.MyProjects.TestReports.ProjectSpentTimeReportTest"/>-->
+            <!--<class name="Tests.MyProjects.TestReports.UserSpentTimeReportTest"/>-->
+            <!--<class name="Tests.MyProjects.TestReports.TestPlanReportTest"/>-->
+            <!--<class name="Tests.MyProjects.TestReports.TestRunReportTest"/>-->
+            <!--<class name="Tests.MyProjects.Issues.AddIssueTest"/>-->
+            <!--<class name="Tests.MyProjects.Issues.EditIssueTest"/>-->
+            <!--<class name="Tests.MyProjects.Issues.DeleteIssueTest"/>-->
+            <!--<class name="Tests.MyProjects.TestRuns.DeleteTestRunTest"/>-->
+            <!--<class name="Tests.MyProjects.TestPlan.DeleteTestCaseTest"/>-->
+            <!--<class name="Tests.MyProjects.TestPlan.DeleteModuleTest"/>-->
+            <!--<class name="Tests.MyProjects.TestPlan.DeleteTestPlanTest"/>-->
+            <!--<class name="Tests.MyProjects.TestObject.DeleteTestObjectTest"/>-->
+            <!--<class name="Tests.MyProjects.DeleteProjectMemberTest"/>-->
+            <!--<class name="Tests.MyProjects.DeleteProjectTest"/>-->
+            <!--<class name="Tests.MyOrganizations.DeleteOrganizationMemberTest"/>-->
+            <!--<class name="Tests.MyOrganizations.DeleteOrganizationTest"/>-->
+        <!--</classes>-->
+    <!--</test>-->
 
 </suite>
