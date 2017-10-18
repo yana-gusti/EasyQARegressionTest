@@ -29,8 +29,10 @@ public class BaseTest {
     public void SetUp(String server) {
         System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
         ChromeOptions chrome_options = new ChromeOptions();
+        chrome_options.addArguments("--window-size=1920,1400");
         chrome_options.addArguments("--headless");
         chrome_options.addArguments("--disable-gpu");
+
 
         driver = new ChromeDriver(chrome_options);
 
