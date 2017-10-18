@@ -15,6 +15,5 @@ public class AddTestObjectTest extends BaseTest {
         Projects projects = openProject();
         TestObjects testObjects = projects.goToTestObjects(driver);
         testObjects.addTestObject(driver, "http://jenkins.easyerp.com:8080/");
-        logout();
     }
 }
