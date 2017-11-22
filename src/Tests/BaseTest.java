@@ -60,12 +60,12 @@ public class BaseTest {
 //    public void SetUp() throws InterruptedException {
 //
 //
-//        System.setProperty("webdriver.chrome.driver", "./drivers/for mac/chromedriver");
+//        System.setProperty("webdriver.chrome.driver", "./drivers/for mac/chromedriver1");
 //        ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--window-size=1920,1400");
 //        driver = new ChromeDriver(options);
 //
-//        baseUrl = "https://app.geteasyqa.com/";
+//        baseUrl = "http://35.195.114.227";
 //
 //        driver.get(baseUrl+"/users/sign_in");
 //        waitForElement(".//*[@id='user_email']");

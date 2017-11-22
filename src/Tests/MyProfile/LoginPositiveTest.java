@@ -1,7 +1,6 @@
 package Tests.MyProfile;
 
 
-import Methods.MyProfile.Login;
 import Tests.BaseTest;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -16,7 +15,7 @@ public class LoginPositiveTest extends BaseTest {
     public void loginPositive(){
        login();
         waitForElement(".//*[@id='mCSB_2_container']/div[1]/div/div/div/div/div[1]/div[1]/a");
-        Assert.assertEquals("Yana Gusti", driver.findElement(By.xpath(".//*[@id='mCSB_2_container']/div[1]/div/div/div/div/div[1]/div[1]/a")).getText());
+        Assert.assertEquals("Iana Gusti", driver.findElement(By.xpath(".//*[@id='mCSB_2_container']/div[1]/div/div/div/div/div[1]/div[1]/a")).getText());
         logout();
     }
 
