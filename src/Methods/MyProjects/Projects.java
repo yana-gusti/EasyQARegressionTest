@@ -15,8 +15,8 @@ public class Projects extends BasePageMethods{
         clickButton(driver,".//*[@id='head_menu']/div[2]/a[2]");
         waitForElement(driver, ".//*[@id='myModal']/div/div/div[1]/h3");
         clickButton(driver, ".//*[@id='organization']/div/a");
-        waitForElement(driver, ".//*[@id='organization']/ul/li[2]/a");
-        clickButton(driver, ".//*[@id='organization']/ul/li[2]/a");
+        waitForElement(driver, ".//*[@id='organization']/ul/div/div/li[2]/a");
+        clickButton(driver, ".//*[@id='organization']/ul/div/div/li[2]/a");
         clickButton(driver, ".//*[@id='new_project']/div/div[1]/div[2]/div/label[1]");
         clickButton(driver, ".//*[@id='new_project']/div/div[1]/div[2]/div/label[2]");
         clickButton(driver, ".//*[@id='new_project']/div/div[1]/div[2]/div/label[3]");
@@ -88,7 +88,7 @@ public class Projects extends BasePageMethods{
         clickButton(driver, ".//*[@id='modal_window']");
         waitForElement(driver, ".//*[@id='add_members']/tbody/tr[2]/td[6]/label");
         driver.findElement(By.className("project-role")).findElement(By.xpath("./div/div/div/a/label")).click();
-        driver.findElement(By.className("project-role")).findElement(By.xpath("./div/div/ul/li[2]/a")).click();
+        driver.findElement(By.className("project-role")).findElement(By.xpath("./div/div/ul/div/div/li[2]/a")).click();
 
         clickButton(driver, ".//*[@id='send']");
         waitForElement(driver, ".//*[@id='content']/div/table/tbody/tr[2]/td[2]");

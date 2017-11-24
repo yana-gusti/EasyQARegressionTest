@@ -20,7 +20,7 @@ public class TestRuns extends BasePageMethods {
         waitForElement(driver, ".//*[@id='new_test_run']/div[1]");
         sendText(driver, ".//*[@id='test_run_title']", name);
         clickButton(driver, ".//*[@id='assignedTestRun']/div/a");
-        clickButton(driver, ".//*[@id='assignedTestRun']/ul/li[2]/a");
+        clickButton(driver, ".//*[@id='assignedTestRun']/ul/div/div/li[2]/a");
 
         sendText(driver, ".//*[@id='test_run_description']", name);
 
@@ -29,9 +29,9 @@ public class TestRuns extends BasePageMethods {
                 .build().perform();
         clickButton(driver, ".//*[@id='testRunSelect']/div/a");
         sleep(1000);
-        waitForElement(driver, ".//*[@id='testRunSelect']/ul/li[2]/a");
-        clickButton(driver, ".//*[@id='testRunSelect']/ul/li[2]/a");
-        driver.findElement(By.xpath(".//*[@id='testRunSelect']/ul/li[2]/a")).submit();
+        waitForElement(driver, ".//*[@id='testRunSelect']/ul/div/div/li[2]/a");
+        clickButton(driver, ".//*[@id='testRunSelect']/ul/div/div/li[2]/a");
+        driver.findElement(By.xpath(".//*[@id='testRunSelect']/ul/div/div/li[2]/a")).submit();
         sleep(2000);
         Assert.assertEquals(name, driver.findElement(By.className("testRun-box-item-info")).findElement(By.xpath("./a")).getText());
     }

@@ -24,7 +24,7 @@ public class TestPlans extends BasePageMethods{
 
     public void editTestPlan(WebDriver driver, String name) throws InterruptedException {
         driver.findElement(By.className("nav-tabs")).findElement(By.xpath("./li[2]/a")).click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         driver.findElement(By.className("plans-icons")).findElement(By.xpath("./div[2]")).click();
         waitForElement(driver, ".//*[@id='myModal']/div/div");
         sendText(driver, ".//*[@id='test_plan_title']", name);

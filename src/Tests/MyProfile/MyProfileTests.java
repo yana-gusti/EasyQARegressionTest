@@ -18,7 +18,7 @@ public class MyProfileTests extends BaseTest{
         login.login(driver,email, password);
         waitForElement(".//*[@id='mCSB_2_container']/div[1]/div/div/div/div/div[1]/div[1]/a");
         MyProfile myProfile = login.goToMyProfile(driver);
-        waitForElement(".//*[@id='edit_user_543']/div[1]/h3");
+        Thread.sleep(2000);
         myProfile.changeBillingInfo(driver,"test", "test", "test","test","12312", "test", "Albania");
         waitForElement("html/body/div[2]/div[1]");
         myProfile.checkText(driver,"Update Success", "html/body/div[2]/div[1]");

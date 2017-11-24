@@ -12,7 +12,7 @@ import java.awt.*;
  */
 public class CrashesByVersionReportTest extends BaseTest {
     @Test
-    public void userSpentTimeReport() throws InterruptedException, AWTException {
+    public void crashesByVersionReport() throws InterruptedException, AWTException {
         Projects projects = openProject();
         projects.goToTestActivities(driver);
         TestReports testReports = new TestReports();
