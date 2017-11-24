@@ -20,7 +20,7 @@ public class BaseTest {
 
     public WebDriver driver;
     public String baseUrl;
-    public String email = "yana.gusti+4@gmail.com";
+    public String email = "yana.gusti+1@gmail.com";
     public String password = "111111";
 
 
@@ -54,7 +54,7 @@ public class BaseTest {
 
 
     }
-
+//
 //    @BeforeMethod
 //
 //    public void SetUp() throws InterruptedException {
@@ -65,7 +65,7 @@ public class BaseTest {
 //        options.addArguments("--window-size=1920,1400");
 //        driver = new ChromeDriver(options);
 //
-//        baseUrl = "http://35.196.75.58";
+//        baseUrl = "https://app.geteasyqa.com";
 //
 //        driver.get(baseUrl+"/users/sign_in");
 //        waitForElement(".//*[@id='user_email']");
